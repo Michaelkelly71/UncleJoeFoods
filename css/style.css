@@ -164,9 +164,17 @@ p:last-child { margin-bottom: 0; }
 }
 
 .nav-logo img {
-  height: 52px;
-  width: auto;
-  object-fit: contain;
+  /* Force a wider-than-natural aspect ratio so object-fit:cover
+     crops from the bottom, hiding the baked-in "YAM CHIPS" text.
+     Original image is ~252×300 (0.84 ratio). At 52×40 container
+     (ratio 1.3) the image scales to 52×61.9px, showing only the
+     top 40px (≈65%) — character + "UNCLE JOE" visible, "YAM CHIPS"
+     at 78–100% of image height is fully outside the container. */
+  width: 52px;
+  height: 40px;
+  object-fit: cover;
+  object-position: top center;
+  flex-shrink: 0;
 }
 
 .nav-links {
@@ -622,6 +630,7 @@ p:last-child { margin-bottom: 0; }
   gap: 10px;
   text-decoration: none;
 }
+
 .nav-logo-text {
   font-family: var(--font-heading);
   font-size: 1.15rem;

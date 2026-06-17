@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" href="images/logo.jpg" />
 
   <!-- Preload hero image (above-the-fold) -->
-  <link rel="preload" as="image" href="images/banner-hero.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="images/hero-yam.webp" type="image/webp" fetchpriority="high" />
 
   <!-- Open Graph / social sharing -->
   <meta property="og:type" content="website" />
@@ -64,55 +64,54 @@
   </header>
 
 
-  <!-- ════════════════════ HERO (split layout with bold headline) ════════════════════ -->
+  <!-- ════════════════════ HERO (split — product + copy) ════════════════════ -->
   <section class="hero" id="hero" aria-label="Hero banner">
-    <div class="container hero-grid">
-      
-      <!-- Left: Product Visual with Overlapping Images -->
-      <div class="hero-visual" id="heroVisual" aria-hidden="true">
-        <div class="hero-visual-inner">
-          <!-- Top Center: Package -->
-          <div class="hero-visual-item hero-visual--package">
-            <picture>
-              <source srcset="images/banner-hero.webp" type="image/webp" />
-              <img src="images/banner-hero.jpg" alt="Uncle Joe Foods Premium Yam Package" width="450" height="300" decoding="async" />
-            </picture>
-          </div>
-          
-          <!-- Bottom Left: Fresh Yam -->
-          <div class="hero-visual-item hero-visual--fresh">
-            <picture>
-              <source srcset="images/fresh-ghana-yam.webp" type="image/webp" />
-              <img src="images/fresh-ghana-yam.jpg" alt="Fresh Ghana Yam" width="380" height="320" decoding="async" />
-            </picture>
-          </div>
-          
-          <!-- Bottom Right: Pounded Yam -->
-          <div class="hero-visual-item hero-visual--pounded">
-            <picture>
-              <source srcset="images/pounded-yam.webp" type="image/webp" />
-              <img src="images/pounded-yam.jpg" alt="Pounded Yam Dish" width="340" height="340" decoding="async" />
-            </picture>
+
+    <span class="hero-leaf hero-leaf--tr" aria-hidden="true"></span>
+    <span class="hero-leaf hero-leaf--bl" aria-hidden="true"></span>
+
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-figure reveal" id="heroVisual">
+          <div class="hero-figure-ring" aria-hidden="true"></div>
+          <picture>
+            <source srcset="images/hero-yam.webp" type="image/webp" />
+            <img src="images/hero-yam.jpg"
+                 alt="Fresh Ghanaian yam — whole tuber, slices, and diced cubes on a wooden board"
+                 width="560" height="560" decoding="async" fetchpriority="high" />
+          </picture>
+        </div>
+
+        <div class="hero-content reveal">
+          <span class="hero-sprig" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="24" viewBox="0 0 48 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 22 C 14 18, 28 14, 44 4"/>
+              <path d="M30 11 q 3 -7 11 -7"/>
+              <path d="M20 15 q 3 -6 10 -6"/>
+              <path d="M11 19 q 3 -6 10 -6"/>
+            </svg>
+          </span>
+          <span class="eyebrow">Best Quality Products</span>
+          <h1 class="display-1">Premium African<br/><em>Yam</em>&nbsp;the way<br/>Ghana intended.</h1>
+          <p>
+            When you think of pure, wholesome, authentic West African yam,
+            think Uncle Joe Foods. Frozen-fresh fries, slices, and pounded yam.
+          </p>
+          <div class="hero-actions">
+            <a href="products.html" class="btn btn-primary btn-magnetic">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+              Shop now
+            </a>
+            <a href="contact.html" class="btn btn-ghost btn-magnetic">
+              Get in touch
+            </a>
           </div>
         </div>
-      </div>
 
-      <!-- Right: Content -->
-      <div class="hero-content">
-        <span class="eyebrow">✦ 100% Natural · Authentic</span>
-        <h1 class="hero-headline">Yam,<br/><em>the way</em><br/>Ghana<br/>intended.</h1>
-        <p class="hero-tagline">
-          From the heart of West Africa to your table. Authentically prepared yam fries, slices, and pounded yam, packed with flavour and goodness.
-        </p>
-        <div class="hero-actions">
-          <a href="products.html" class="btn btn-primary btn-magnetic">
-            Shop now
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-        </div>
       </div>
-
     </div>
+
   </section>
 
 

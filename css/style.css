@@ -320,87 +320,146 @@ p:last-child { margin-bottom: 0; }
   50% { transform: translateY(-15px); }
 }
 
-.hero-visual-inner img {
+/* Overlapping product images */
+.hero-visual-item {
+  position: absolute;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(27, 59, 26, 0.18);
+}
+
+.hero-visual-item picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-visual-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
-/* Right: Content */
-.hero-content {
-  position: relative;
+/* Package: Top Center */
+.hero-visual--package {
+  width: 280px;
+  height: 200px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  border-radius: 16px;
+}
+
+/* Fresh Yam: Bottom Left */
+.hero-visual--fresh {
+  width: 200px;
+  height: 200px;
+  bottom: 20px;
+  left: 0;
   z-index: 2;
-  max-width: 600px;
+  border-radius: 20px;
 }
 
-.hero-content .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--clr-accent);
-  margin-bottom: 1.8rem;
+/* Pounded Yam: Bottom Right */
+.hero-visual--pounded {
+  width: 200px;
+  height: 200px;
+  bottom: 20px;
+  right: 0;
+  z-index: 2;
+  border-radius: 20px;
 }
 
-.hero-headline {
-  font-family: var(--font-heading);
-  font-size: clamp(3.5rem, 8.5vw, 5.5rem);
-  line-height: 1.05;
-  margin-bottom: 1.8rem;
-  color: var(--clr-text);
-  letter-spacing: -0.02em;
-  font-weight: 700;
+.hero-visual-inner {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  background: none;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  animation: heroVisualContainerFloat 4s ease-in-out infinite;
 }
 
-.hero-headline em {
-  font-style: italic;
-  color: var(--clr-accent);
-  font-weight: 600;
+@keyframes heroVisualContainerFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
 }
 
-.hero-tagline {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--clr-text-muted);
-  margin-bottom: 2.4rem;
-  max-width: 540px;
+@keyframes heroVisualFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
 }
 
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.hero-actions .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-/* Decorative flourish */
-.hero::after {
-  content: '';
+/* Overlapping product images */
+.hero-visual-item {
   position: absolute;
-  bottom: 0;
-  right: -100px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle at 30% 50%, rgba(46, 125, 50, 0.06) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(27, 59, 26, 0.18);
 }
 
-/* Responsive: stack vertically on tablet/mobile */
-@media (max-width: 900px) {
-  .hero {
-    min-height: auto;
-    padding: 80px 0;
-  }
+.hero-visual-item picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-visual-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Package: Top Center */
+.hero-visual--package {
+  width: 280px;
+  height: 200px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  border-radius: 16px;
+}
+
+/* Fresh Yam: Bottom Left */
+.hero-visual--fresh {
+  width: 200px;
+  height: 200px;
+  bottom: 20px;
+  left: 0;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+/* Pounded Yam: Bottom Right */
+.hero-visual--pounded {
+  width: 200px;
+  height: 200px;
+  bottom: 20px;
+  right: 0;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+/* Hero visual container for overlapping images */
+.hero-visual-inner {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  background: none;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  animation: heroVisualFloat 4s ease-in-out infinite;
+}
 
   .hero-grid {
     grid-template-columns: 1fr;

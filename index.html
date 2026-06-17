@@ -68,13 +68,32 @@
   <section class="hero" id="hero" aria-label="Hero banner">
     <div class="container hero-grid">
       
-      <!-- Left: Product Visual -->
+      <!-- Left: Product Visual with Overlapping Images -->
       <div class="hero-visual" id="heroVisual" aria-hidden="true">
         <div class="hero-visual-inner">
-          <picture>
-            <source srcset="images/banner-hero.webp" type="image/webp" />
-            <img src="images/banner-hero.jpg" alt="Uncle Joe Foods Premium Yam" width="500" height="500" decoding="async" />
-          </picture>
+          <!-- Top Center: Package -->
+          <div class="hero-visual-item hero-visual--package">
+            <picture>
+              <source srcset="images/banner-hero.webp" type="image/webp" />
+              <img src="images/banner-hero.jpg" alt="Uncle Joe Foods Premium Yam Package" width="450" height="300" decoding="async" />
+            </picture>
+          </div>
+          
+          <!-- Bottom Left: Fresh Yam -->
+          <div class="hero-visual-item hero-visual--fresh">
+            <picture>
+              <source srcset="images/fresh-ghana-yam.webp" type="image/webp" />
+              <img src="images/fresh-ghana-yam.jpg" alt="Fresh Ghana Yam" width="380" height="320" decoding="async" />
+            </picture>
+          </div>
+          
+          <!-- Bottom Right: Pounded Yam -->
+          <div class="hero-visual-item hero-visual--pounded">
+            <picture>
+              <source srcset="images/pounded-yam.webp" type="image/webp" />
+              <img src="images/pounded-yam.jpg" alt="Pounded Yam Dish" width="340" height="340" decoding="async" />
+            </picture>
+          </div>
         </div>
       </div>
 
